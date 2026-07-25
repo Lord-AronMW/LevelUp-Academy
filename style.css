@@ -1,0 +1,61 @@
+body{
+    background-image: url('background.jpg');
+    background-size: cover;
+    color: white;
+}
+
+
+h1{
+    font-size: 60px;
+    font-family: Audiowide;
+}
+
+.heading{
+    font-size: 40px;
+    font-family: Audiowide;
+}
+
+.navbar{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 0, 0);
+    padding: 10px;
+    margin-top: -40px;
+}
+
+.logo{
+    color: white;
+    font-size: 24px;
+    font-family:'Gill Sans';
+    margin-left: 50px;
+}
+
+.logo img{
+    width:120px;
+    height:120px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li{
+    margin-right: 400px;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 30px;
+}
+
+.nav-links a:hover{
+    color: rgb(17, 0, 255);
+}
