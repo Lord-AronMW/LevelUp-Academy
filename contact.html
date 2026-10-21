@@ -54,4 +54,87 @@
         border: 1px solid rgba(255,255,255,.12);
         border-radius: 14px;
         box-shadow: 0 12px 36px rgba(0,0,0,.22);
+        backdrop-filter: blur(14px);
+    }
+    .navbar .logo { display: flex; align-items: center; margin: 0; flex: 0 0 auto; }
+    .navbar .logo img { display: block; width: 88px; height: 62px; object-fit: contain; }
+    .navbar .nav-links { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 8px; list-style: none; margin: 0; padding: 0; }
+    .navbar .nav-links li { margin: 0; }
+    .navbar .nav-links a { display: inline-block; padding: 9px 13px; border-radius: 8px; color: #f1f1fa !important; font-size: 15px; font-weight: 600; text-decoration: none; transition: background .18s ease, color .18s ease; }
+    .navbar .nav-links a:hover, .navbar .nav-links a.active { color: #ffc04d !important; background: rgba(166, 99, 255, .15) !important; }
+    .page-main { width: min(1100px, calc(100% - 36px)); margin: 58px auto 76px !important; padding: 0 !important; background: transparent !important; }
+    .contact-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(320px, 1.1fr); gap: 28px; align-items: start; }
+    .intro { padding-top: 5px; }
+    .eyebrow { display: inline-block; margin: 0 0 12px; color: #ffc04d; font-size: .76rem; font-weight: 750; letter-spacing: .17em; text-transform: uppercase; }
+    .page-title { margin: 0; color: #fff; font-family: Audiowide, "Segoe UI", sans-serif; font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 400; line-height: 1.16; letter-spacing: -.035em; }
+    .intro-copy { max-width: 430px; margin: 18px 0 26px; color: #c8c9d8; font-size: 1.04rem; }
+    .contact-reminder { max-width: 430px; padding: 17px 18px; background: rgba(20,22,41,.75); border-left: 3px solid #a56aff; border-radius: 0 10px 10px 0; color: #d4d5e0; font-size: .94rem; }
+    .contact-form { padding: 27px; background: rgba(20, 22, 41, .92) !important; border: 1px solid rgba(190,160,255,.18); border-radius: 15px; box-shadow: 0 16px 40px rgba(0,0,0,.2); }
+    .contact-form h2 { margin: 0 0 5px; color: #fff; font-size: 1.35rem; }
+    .form-intro { margin: 0 0 22px; color: #bfc1d2; font-size: .92rem; }
+    .field { margin-bottom: 16px; }
+    .field label { display: block; margin-bottom: 6px; color: #ededf5; font-size: .9rem; font-weight: 650; }
+    .field input, .field select, .field textarea { display: block; width: 100%; padding: 12px 13px; color: #f5f5fa; background: rgba(8,10,24,.72); border: 1px solid rgba(255,255,255,.17); border-radius: 8px; font: inherit; font-size: .94rem; outline: none; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: #b28aff; box-shadow: 0 0 0 3px rgba(166,99,255,.13); }
+    .field input::placeholder, .field textarea::placeholder { color: #83869d; }
+    .field textarea { min-height: 120px; resize: vertical; }
+    .field select option { background: #15172a; color: #f5f5fa; }
+    .submit-button { display: inline-flex; justify-content: center; width: 100%; padding: 12px 18px; color: #17101f; background: #ffc04d; border: 0; border-radius: 8px; font: inherit; font-weight: 750; cursor: pointer; transition: transform .18s ease, background .18s ease; }
+    .submit-button:hover { background: #ffd071; transform: translateY(-1px); }
+    .form-note { margin: 13px 0 0; color: #aeb0c4; font-size: .82rem; }
+    .form-feedback { margin: 12px 0 0; color: #ffcf72; font-size: .9rem; }
+    @media (max-width: 760px) {
+        .navbar, .navbar.enhanced-navbar { width: calc(100% - 20px); padding: 8px 12px; gap: 8px; }
+        .navbar .logo img { width: 66px; height: 52px; }
+        .navbar .nav-links { gap: 2px; }
+        .navbar .nav-links a { padding: 8px; font-size: 13px; }
+        .page-main { margin-top: 42px !important; }
+        .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+        .contact-form { padding: 22px; }
+    }
+</style>
+<main class="page-main">
+    <div class="contact-grid">
+        <div class="intro">
+            <p class="eyebrow">Get in touch</p>
+            <h1 class="page-title">Let's talk about what you want to learn.</h1>
+            <p class="intro-copy">Have a question about a course or an idea for something you'd like to study? Leave a note and use the form to prepare your message.</p>
+            <div class="contact-reminder">Before this page goes live, connect the form to an inbox or form service. It currently shows a preview only and does not send messages.</div>
+        </div>
+
+        <form class="contact-form" onsubmit="event.preventDefault(); document.getElementById('form-feedback').textContent = 'This preview has not sent your message. Connect the form to an inbox or form service first.';">
+            <h2>Send an enquiry</h2>
+            <p class="form-intro">Fields marked with * are required.</p>
+            <div class="field">
+                <label for="name">Your name *</label>
+                <input id="name" name="name" type="text" placeholder="Name" autocomplete="name" required>
+            </div>
+            <div class="field">
+                <label for="email">Email address *</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+            <div class="field">
+                <label for="topic">What would you like to ask about?</label>
+                <select id="topic" name="topic">
+                    <option value="">Choose a topic</option>
+                    <option value="courses">Courses and learning</option>
+                    <option value="game-development">Game development</option>
+                    <option value="web-development">Web design and development</option>
+                    <option value="content-creation">Streaming and content creation</option>
+                    <option value="other">Something else</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="message">Your message *</label>
+                <textarea id="message" name="message" placeholder="Tell us a little about what you need..." required></textarea>
+            </div>
+            <button class="submit-button" type="submit">Prepare message</button>
+            <p class="form-note">This is a front-end form preview; it is not connected to an inbox yet.</p>
+            <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+    </div>
+</main>
+</div>
+</body>
+</html>
 "
