@@ -1,33 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=""en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>levelup Academy</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bitcount+Grid+Double:wght@100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Serif+Hentaigana:wght@200..900&family=Rubik+Iso&display=swap" rel="stylesheet">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width"=device-width, initial-scale="1"">
+<title>LevelUP Academy | Your first VALORANT round starts here</title>
+<meta name=""description" content="A fan-made beginner guide to VALORANT: the round, roles, buying, aim habits, maps and a 20 minute warm-up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
 </head>
-<body>
+<body data-theme="dark">
 
-<nav class="navbar">
-    <div class="logo">
-        <img src="logo-removebg-preview (1).png" alt="LevelUp Academy Logo">
-    </div>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="mark" viewBox="0 0 24 24"><path d="M3 8V3h5M16 3h5v5M21 16v5h-5M8 21H3v-5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="arrow-ur" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+  <symbol id="arrow-l" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="arrow-r" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="cart" viewBox="0 0 24 24"><path d="M3 4h2l2 10h10l2-7H6"/><circle cx="9" cy="19" r="1.2"/><circle cx="16" cy="19" r="1.2"/></symbol>
+  <symbol id="steps" viewBox="0 0 24 24"><ellipse cx="8" cy="9" rx="2.5" ry="4"/><ellipse cx="16" cy="15" rx="2.5" ry="4"/></symbol>
+  <symbol id="diamond" viewBox="0 0 24 24"><path d="M12 3l9 9-9 9-9-9z"/></symbol>
+  <symbol id="loop" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-3-6.2"/><path d="M20 4v4h-4"/></symbol>
+  <symbol id="flame" viewBox="0 0 24 24"><path d="M12 3c1 4 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3 0-6 1-9z"/></symbol>
+  <symbol id="radar" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="cloud" viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1 0-8 5 5 0 0 1 9.5-1A4.5 4.5 0 0 1 17 18z"/></symbol>
+  <symbol id="shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol>
+  <symbol id="bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="map" viewBox="0 0 24 24"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"/><path d="M9 4v14M15 6v14"/></symbol>
+  <symbol id="route" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.5 6H15a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h6.5"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></symbol>
+</svg>
 
-    <h1>LevelUp Academy</h1>
-    <p class="heading">Welcome to LevelUp Academy!</p>
-    
+<header class="site-header">
+  <a class="brand" href="#start" aria-label="LevelUP Academy, back to start">
+    <svg class="i brand-mark"><use href="#mark"/></svg>LevelUP Academy
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <a href="#round">The basics</a>
+    <a href="#roles">Find your role</a>
+    <a href="#habits">Build your skills</a>
+    <a class="btn btn-sm" href="#round">Start learning <svg class="i"><use href="#arrow-ur"/></svg></a>
+  </nav>
+</header>
+
+<main class="page-content" id="main-content">
+      <!-- 1. Hero -->
+    <section class="page-section hero" id="start" data-theme="dark" aria-label="Introduction">
+      <p class="label mono reveal">New to VALORANT? You're in the right place.</p>
+      <h1 class="display h-xl reveal">Your first round starts here.</h1>
+      <div class="lede reveal late">
+        <p>Five players. One Spike. A fresh start.</p>
+        <p>Learn the essentials, find your role, and queue up with a little more confidence.</p>
+      </div>
+      <div class="cta-row reveal late">
+        <a class="btn" href="#round">Learn the basics <svg class="i"><use href="#arrow-ur"/></svg></a>
+        <span class="mono soft-light">15 min read, zero experience needed</span>
+      </div>
+      <p class="fineprint reveal late">Not affiliated with Riot Games.</p>
+    </section>
+
+    <!-- 2. The round -->
+    <section class="page-section light round-section" id="round" data-theme="light" aria-label="The round">
+      <div class="path" aria-label="Your learning path">
+        <div><span class="mono">Your learning path</span><br><span class="soft-light">Small steps. Better rounds.</span></div>
+        <div><span class="step-no">01-02</span>Understand the round</div>
+        <div><span class="step-no">03-04</span>Find your loadout</div>
+        <div><span class="step-no">05-06</span>Build good habits</div>
+        <div><span class="step-no">07-08</span>Get ready to play</div>
+      </div>
+      <div class="section-head reveal">
+        <h2 class="display h-lg">One team. One round at a time.</h2>
+        <p class="soft-dark">VALORANT is a 5v5 tactical shooter. Smart positioning, teamwork, and the objective matter as much as your aim.</p>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><strong>5v5</strong><span>Two teams, different objectives</span></div>
+        <div class="stat"><strong>13</strong><span>Rounds to win in standard play*</span></div>
+        <div class="stat"><strong>12</strong><span>Rounds before switching sides</span></div>
+        <div class="stat"><strong>1:40</strong><span>Round timer before the plant</span></div>
+      </div>
+      <div class="steps reveal late">
+        <article class="step"><div class="top"><svg class="i"><use href="#cart"/></svg><span class="mono">01</span></div><h3>Buy &amp; plan</h3><p>Spend credits on weapons, shields, and abilities. Pick a site or a place to defend.</p></article>
+        <article class="step"><div class="top"><svg class="i"><use href="#steps"/></svg><span class="mono">02</span></div><h3>Take space</h3><p>Barriers drop. Move with your team, check corners, and use abilities to help you advance.</p></article>
+        <article class="step"><div class="top"><svg class="i"><use href="#diamond"/></svg><span class="mono">03</span></div><h3>Play the objective</h3><p>Attackers try to plant the Spike. Defenders stop the plant, or retake the site and defuse.</p></article>
+        <article class="step"><div class="top"><svg class="i"><use href="#loop"/></svg><span class="mono">04</span></div><h3>Reset &amp; adapt</h3><p>A round ends. Check your credits, share a plan, and take one lesson into the next round.</p></article>
+      </div>
+      <p class="footnote reveal late">*This guide follows standard Unrated and Competitive rules. Competitive overtime requires a two-round lead; other modes use different formats.</p>
+    </section>
+
+    <!-- 3. Attackers and defenders -->
+    <section class="page-section dark" id="mission" data-theme="dark" aria-label="Attackers and defenders">
+      <div class="section-head reveal">
+        <h2 class="display h-lg">Same map. Different mission.</h2>
+        <p class="soft-light">The Spike is the device attackers carry. Once it's planted, the round becomes a race against a new clock.</p>
+      </div>
+      <div class="panels reveal">
+        <article class="panel">
+          <div class="panel-head"><h3><svg class="i"><use href="#diamond"/></svg>Attackers</h3><span class="mono soft-light">Take the site</span></div>
+          <p class="goal">Plant the Spike. Protect it until it detonates.</p>
+          <ol>
+            <li>Carry the Spike to a marked plant site. Clear space with your team before planting.</li>
+            <li>Press 4 to equip the Spike, then hold fire to plant. Stay still for the full 4 seconds.</li>
+            <li>After planting, watch routes to the Spike. You don't need to hunt every defender.</li>
+          </ol>
+        </article>
+        <article class="panel">
+          <div class="panel-head"><h3><svg class="i"><use href="#shield"/></svg>Defenders</h3><span class="mono soft-light">Hold the site</span></div>
+          <p class="goal">Stop the plant. If it goes down, defuse it.</p>
+          <ol>
+            <li>Cover entry routes and gather information. If attackers never plant, a timer win is yours.</li>
+            <li>If a site falls, regroup and retake together. Clear danger before touching the Spike.</li>
+            <li>Hold your Use key (default 4) near the Spike to defuse. The halfway checkpoint saves progress.</li>
+          </ol>
+        </article>
+      </div>
+      <div class="timers reveal late">
+        <span class="t"><strong>4 sec</strong>to plant</span>
+        <span class="t"><strong>45 sec</strong>until detonation</span>
+        <span class="t"><strong>7 sec</strong>to fully defuse</span>
+        <p class="note">Before the plant, eliminating the enemy team wins. After the plant, defenders still have to defuse.</p>
+      </div>
+    </section>
+
+    <!-- 4. Roles -->
+    <section class="page-section light" id="roles" data-theme="light" aria-label="Roles">
+      <div class="section-head reveal">
+        <h2 class="display h-lg">Find your way to help.</h2>
+        <p class="soft-dark">Every agent has a role, not a skill requirement. Pick a playstyle that sounds fun, then learn one agent at a time.</p>
+      </div>
+      <div class="roles reveal">
+        <article class="role"><div class="portrait" style="--img: url('assets/phoenix.jpg')"><span class="tag mono">Phoenix</span></div><div class="body"><div class="row"><h3>Duelist</h3><svg class="i"><use href="#flame"/></svg></div><p class="tagline">Make the first move.</p><p>Create space and take the first fight so your team can follow.</p><p class="tip">Go in with support, not alone.</p></div></article>
+        <article class="role"><div class="portrait" style="--img: url('assets/sova.jpg')"><span class="tag mono">Sova</span></div><div class="body"><div class="row"><h3>Initiator</h3><svg class="i"><use href="#radar"/></svg></div><p class="tagline">Set your team up.</p><p>Reveal or disrupt enemies before your teammates move in.</p><p class="tip">Gather info before committing.</p></div></article>
+        <article class="role"><div class="portrait" style="--img: url('assets/brimstone.jpg')"><span class="tag mono">Brimstone</span></div><div class="body"><div class="row"><h3>Controller</h3><svg class="i"><use href="#cloud"/></svg></div><p class="tagline">Shape the battlefield.</p><p>Use smokes to block dangerous sightlines and divide a site.</p><p class="tip">Smoke the angles you can't watch.</p></div></article>
+        <article class="role"><div class="portrait" style="--img: url('assets/sage.jpg')"><span class="tag mono">Sage</span></div><div class="body"><div class="row"><h3>Sentinel</h3><svg class="i"><use href="#shield"/></svg></div><p class="tagline">Keep your team secure.</p><p>Hold space, watch flanks, and support your teammates.</p><p class="tip">Make enemies work for every step.</p></div></article>
+      </div>
+      <p class="callout reveal late"><svg class="i"><use href="#bulb"/></svg>Start simple: learn what each ability does in the Range. Abilities create an advantage, but your positioning and gunplay still matter.</p>
+    </section>
+
+    <!-- 5. Buying -->
+    <section class="page-section light" id="buy" data-theme="light" aria-label="Buying">
+      <div class="section-head reveal">
+        <h2 class="display h-lg">Buy with a plan. Not a panic.</h2>
+        <p class="soft-dark">Credits carry between rounds. Spend with your team so you can fight on equal footing, not with five different budgets.</p>
+      </div>
+      <div class="buy reveal">
+        <div>
+          <table class="table">
+            <thead><tr class="mono"><th scope="col">Weapon / type</th><th scope="col">Credits</th><th scope="col">Good to know</th></tr></thead>
+            <tbody>
+              <tr><td><b>Classic</b><small>Sidearm</small></td><td>Free</td><td>Your starting pistol. A free fallback.</td></tr>
+              <tr><td><b>Spectre</b><small>SMG</small></td><td>1,600</td><td>An affordable option for closer fights.</td></tr>
+              <tr><td><b>Bulldog</b><small>Rifle</small></td><td>2,050</td><td>A lower-cost rifle when credits are tight.</td></tr>
+              <tr><td><b>Phantom</b><small>Rifle</small></td><td>2,900</td><td>Fast fire rate; damage falls off at range.</td></tr>
+              <tr><td><b>Vandal</b><small>Rifle</small></td><td>2,900</td><td>High damage at every range; control your bursts.</td></tr>
+            </tbody>
+          </table>
+          <p class="buy-note">Shields: Light = 400 credits / 25 protection. Heavy = 1,000 / 50 protection. These are starter options, not the full shop. Check current prices in-game.</p>
+        </div>
+        <aside class="full-buy">
+          <div class="img" style="--img: url('assets/rifle.png')" role="img" aria-label="Rifle"></div>
+          <div class="inner">
+            <p class="mono soft-light">A typical full buy</p>
+            <p class="big">3,900<small>+ abilities</small></p>
+            <p>Vandal or Phantom + Heavy Shields. Leave room in your budget for useful abilities.</p>
+            <div class="rules">
+              <p><b>Buy:</b> gear up together.</p>
+              <p><b>Save:</b> spend little to afford the next round.</p>
+              <p><b>Request:</b> ask a teammate for a drop.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 6. Habits -->
+    <section class="page-section light" id="habits" data-theme="light" aria-label="Aim habits">
+      <div class="section-head reveal">
+        <h2 class="display h-lg">Good habits beat fast hands.</h2>
+        <p class="soft-dark">You don't need highlight-reel aim. Start with these three habits and give yourself easier shots.</p>
+      </div>
+      <div class="habits reveal">
+        <figure class="diagram">
+          <span class="cap mono">Crosshair placement</span>
+          <svg viewBox="0 0 400 300" role="img" aria-label="A corridor with a crosshair held at head height beside an enemy peeking over cover">
+            <polygon points="0,0 400,0 320,70 80,70" fill="#151b20"/>
+            <polygon points="0,0 80,70 80,230 0,300" fill="#26323a"/>
+            <polygon points="400,0 320,70 320,230 400,300" fill="#2c3a41"/>
+            <polygon points="0,300 80,230 320,230 400,300" fill="#364850"/>
+            <rect x="80" y="70" width="240" height="160" fill="#2b3840"/>
+            <line x1="30" y1="140" x2="370" y2="140" stroke="#d63a48" stroke-width="1" opacity="0.8"/>
+            <rect x="40" y="128" width="62" height="16" fill="#151b20"/>
+            <text x="46" y="139" fill="#d63a48" font-family="monospace" font-size="8" letter-spacing="1">HEAD HEIGHT</text>
+            <path d="M175 140h18M184 131v18" stroke="#f1efea" stroke-width="1.6"/>
+            <circle cx="262" cy="140" r="13" fill="#9db8ab"/>
+            <rect x="248" y="154" width="28" height="12" fill="#9db8ab"/>
+            <rect x="214" y="168" width="100" height="70" fill="#4a5c63"/>
+            <rect x="222" y="176" width="84" height="54" fill="none" stroke="#6b7f86" stroke-width="1"/>
+          </svg>
+          <span class="foot mono">Less distance to move. More time to react.</span>
+        </figure>
+        <div class="habit-list">
+          <article class="habit"><span class="n">01</span><div><h3>Stop, then shoot.</h3><p>Most guns lose accuracy while you're moving. Release your movement keys and settle before firing.</p></div></article>
+          <article class="habit"><span class="n">02</span><div><h3>Keep your crosshair ready.</h3><p>Aim at likely head height, close to the corner an enemy could appear from, not at the floor.</p></div></article>
+          <article class="habit"><span class="n">03</span><div><h3>Burst. Reset. Repeat.</h3><p>At medium or long range, fire a few shots, pause, and readjust. Long sprays get harder to control.</p></div></article>
+          <p class="aside">One more thing: hold Shift to walk quietly. Running is faster, but your footsteps give away information.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Map -->
+    <section class="page-section dark" id="maps" data-theme="dark" aria-label="Maps and communication">
+      <div class="mapgrid reveal">
+        <div>
+          <h2 class="display h-lg" style="margin-bottom:28px">Learn the space. Share the info.</h2>
+          <div class="map-box">
+            <p class="mono soft-light">Reading a map / simplified diagram</p>
+            <svg viewBox="0 0 400 250" role="img" aria-label="Simplified map with A and B sites, a mid lane and attacker spawn">
+              <rect x="20" y="20" width="360" height="190" fill="#2a363d"/>
+              <rect x="30" y="30" width="105" height="75" fill="#6a3b40" stroke="#d63a48"/>
+              <rect x="265" y="30" width="105" height="75" fill="#6a3b40" stroke="#d63a48"/>
+              <rect x="42" y="40" width="22" height="22" fill="#151b20"/>
+              <rect x="340" y="62" width="22" height="22" fill="#151b20"/>
+              <text x="94" y="82" fill="#f1efea" font-family="Barlow Condensed, sans-serif" font-size="40" font-weight="700">A</text>
+              <text x="290" y="82" fill="#f1efea" font-family="Barlow Condensed, sans-serif" font-size="40" font-weight="700">B</text>
+              <rect x="70" y="115" width="60" height="55" fill="#1e262d"/>
+              <rect x="270" y="115" width="60" height="55" fill="#1e262d"/>
+              <rect x="180" y="95" width="40" height="18" fill="#151b20"/>
+              <text x="190" y="107" fill="#a9b1b8" font-family="monospace" font-size="8">MID</text>
+              <rect x="176" y="190" width="48" height="40" fill="#2a363d"/>
+              <g stroke="#a9b1b8" stroke-dasharray="4 4" fill="none" opacity="0.8">
+                <path d="M200 112v70"/><path d="M200 182H70v-80"/><path d="M200 182h130v-80"/>
+              </g>
+              <circle cx="70" cy="132" r="7" fill="#9db8ab"/>
+              <circle cx="200" cy="205" r="7" fill="#9db8ab"/>
+              <text x="200" y="242" fill="#a9b1b8" font-family="monospace" font-size="8" text-anchor="middle" letter-spacing="1">ATTACKER SPAWN</text>
+            </svg>
+            <p class="legend mono"><span class="sq">Plant site</span><span>Dashed line: possible route</span><span>Not a playable map</span></p>
+          </div>
+        </div>
+        <div class="tips">
+          <p class="soft-light" style="max-width:460px">You don't need every callout on day one. Learn the sites, the routes between them, and where your teammates are.</p>
+          <div class="tip-item"><svg class="i"><use href="#map"/></svg><div><h3>Check the minimap.</h3><p>Glance when you're safe. Notice teammates, revealed enemies, and which routes aren't covered.</p></div></div>
+          <div class="tip-item"><svg class="i"><use href="#route"/></svg><div><h3>Rotate with a reason.</h3><p>A rotation is moving to help another site. Use confirmed information; don't abandon a site at the first sound.</p></div></div>
+          <div class="callout-box"><p class="mono soft-light">A useful callout sounds like</p><q>Two A main. Spike spotted.</q><p>Where + how many + what you know. No mic? Ping the map. Keep it kind, short, and factual.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Warm-up -->
+    <section class="page-section light" id="warmup" data-theme="light" aria-label="Twenty minute warm-up">
+      <div class="section-head reveal">
+        <h2 class="display h-lg">20 minutes. A better start.</h2>
+        <p class="soft-dark">A short warm-up is enough. You're building comfort, not trying to master the entire game before your first match.</p>
+      </div>
+      <div class="warm reveal">
+        <article><div class="mins"><span><strong>05</strong><small>MIN</small></span><svg class="i"><use href="#arrow-r"/></svg></div><span class="where mono">The Range</span><h3>Get comfortable.</h3><p>Try one rifle and one agent. Shoot stationary bots slowly and see what every ability does.</p><p class="focus">Focus: accuracy before speed.</p></article>
+        <article><div class="mins"><span><strong>05</strong><small>MIN</small></span><svg class="i"><use href="#arrow-r"/></svg></div><span class="where mono">The Range</span><h3>Build a tiny habit.</h3><p>Strafe, stop, then fire a short burst. Repeat until standing still before shooting feels natural.</p><p class="focus">Focus: movement, stop, shot.</p></article>
+        <article><div class="mins"><span><strong>10</strong><small>MIN</small></span><svg class="i"><use href="#arrow-r"/></svg></div><span class="where mono">A custom game</span><h3>Walk one map.</h3><p>Find the plant sites, read location names on the map, and trace a route from spawn to each site.</p><p class="focus">Focus: know where you're going.</p></article>
+      </div>
+      <p class="callout reveal late"><svg class="i"><use href="#bulb"/></svg>Then try Swiftplay: shorter matches, the same core objective. Choose one goal, like stopping before you shoot, and let the rest be practice.</p>
+    </section>
+
+    <!-- 9. Glossary -->
+    <section class="page-section light" id="words" data-theme="light" aria-label="Glossary">
+      <div class="section-head reveal">
+        <h2 class="display h-lg">Speak a little VALORANT.</h2>
+        <p class="soft-dark">Heard something unfamiliar? These are a few words you'll hear from teammates. Now you're in on it.</p>
+      </div>
+      <div class="glossary reveal">
+        <div class="term"><h3>Eco</h3><p>A low-spend round to save credits for stronger gear later.</p></div>
+        <div class="term"><h3>Trade</h3><p>Eliminate the enemy who just eliminated your teammate.</p></div>
+        <div class="term"><h3>Rotate</h3><p>Move from one part of the map to help at another.</p></div>
+        <div class="term"><h3>Utility</h3><p>A catch-all word for agent abilities, like smokes and flashes.</p></div>
+        <div class="term"><h3>Peek</h3><p>Expose yourself to check or challenge an angle.</p></div>
+        <div class="term"><h3>Angle</h3><p>A line of sight where someone might be watching.</p></div>
+        <div class="term"><h3>Flank</h3><p>Approach the enemy from the side or behind.</p></div>
+        <div class="term"><h3>Clutch</h3><p>Win a round as the last player alive on your team.</p></div>
+      </div>
+    </section>
+
+    <!-- 10. Closing -->
+    <section class="page-section dark closing" id="begin" data-theme="dark" aria-label="Next step">
+      <div class="main reveal">
+        <div>
+          <p class="eyebrow mono">You know enough to begin.</p>
+          <h2 class="display h-xl">Your next step? Your first round.</h2>
+          <p class="lede">Queue for Swiftplay. Stay curious, be a good teammate, and make one small improvement. That's a win worth taking.</p>
+          <div class="cta-row">
+            <a class="btn" href="https://playvalorant.com" target="_blank" rel="noopener">Open VALORANT <svg class="i"><use href="#arrow-ur"/></svg></a>
+            <a class="link-quiet" href="#round">Back to the basics</a>
+          </div>
+        </div>
+        <div class="checklist">
+          <p class="mono soft-light">Before you queue</p>
+          <ul>
+            <li><svg class="i"><use href="#check"/></svg>Pick one agent you've tried.</li>
+            <li><svg class="i"><use href="#check"/></svg>Check your controls and audio.</li>
+            <li><svg class="i"><use href="#check"/></svg>Set one small learning goal.</li>
+            <li><svg class="i"><use href="#check"/></svg>Remember: everyone starts here.</li>
+          </ul>
+        </div>
+      </div>
+      <footer class="footer">
+        <span class="brand"><svg class="i brand-mark"><use href="#mark"/></svg>LevelUP Academy</span>
+        <a class="link-quiet" href="#start">Back to top</a>
+        <p>Fan-made learning resource. Not affiliated with or endorsed by Riot Games.</p>
+      </footer>
+    </section>
+
+</main>
+
+<script src="script.js" defer></script>
 </body>
 </html>
