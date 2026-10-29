@@ -11,7 +11,7 @@ The website is built with plain HTML, CSS, and JavaScript. It has 10 sections ar
 *This is a fan-made project and is not affiliated with or endorsed by Riot Games.*
 
 ## Screenshots
-![Website image](image-1.png)
+![Website image](<img width="1919" height="907" alt="image" src="https://github.com/user-attachments/assets/40e6379a-2cef-43cd-b639-915ca707d6fe" />)
 
 ## Getting Started
 
